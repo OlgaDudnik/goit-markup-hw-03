@@ -54,6 +54,9 @@ a:visited {
 
 .colortext {
   color: #212121;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .web-text {
@@ -61,6 +64,7 @@ a:visited {
 }
 
 .header-list {
+  margin: 0;
   display: flex;
 }
 
@@ -68,11 +72,18 @@ a:visited {
   margin-right: 50px;
 }
 
+.header-item:last-child {
+  margin-right: 0;
+}
+
 .header-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link:hover {
@@ -96,6 +107,7 @@ a:visited {
 .header-contacts {
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .header-tel {
@@ -176,6 +188,10 @@ a:visited {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+
+/* li .description-title:last-child {
+  margin-right: 0;
+} */
 
 .description p {
   width: 270px;
@@ -343,12 +359,21 @@ a.address-line:visited {
 
 /* ----------------PORTFOLIO-IMG---------------- */
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .portfolio-img {
   background-color: var(--main-title-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 1200px;
   margin: 0 auto;
   background: var(--main-title-color);
 }
