@@ -7,6 +7,13 @@
   --banner-color: #2f303a;
   --our-team-background-color: #f5f4fa;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: Roboto, sans-serif;
   color: var(--second-title-color);
@@ -21,6 +28,15 @@ a:visited {
   color: var(--second-title-color);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -30,12 +46,20 @@ a:visited {
   text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
 /* ----------------header---------------- */
 
 .header {
   display: flex;
   justify-content: space-around;
   background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-navigation {
@@ -54,7 +78,6 @@ a:visited {
 
 .colortext {
   color: #212121;
-  padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
@@ -82,8 +105,7 @@ a:visited {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 0;
 }
 
 .header-link:hover {
@@ -107,7 +129,12 @@ a:visited {
 .header-contacts {
   display: flex;
   align-items: center;
-  margin: 0;
+  margin-left: auto;
+}
+
+.header-mailto,
+.header-tel {
+  padding: 32px 0;
 }
 
 .header-tel {
@@ -125,7 +152,7 @@ a:visited {
 
 /* ----------------section with banner---------------- */
 
-.main-banner {
+.main-banner .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,13 +190,13 @@ a:visited {
 
 /* ----------------DESCRIPTION---------------- */
 
-.description-wrapper {
+.description-wrapper .container {
   text-align: center;
   margin-top: 94px;
 }
 
 .description {
-  display: inline;
+  display: flex;
 }
 
 .description > li {
@@ -177,6 +204,10 @@ a:visited {
   display: inline-block;
   margin-right: 30px;
   text-align: left;
+}
+
+.description > li:last-child {
+  margin-right: 0;
 }
 
 .description h3 {
@@ -221,11 +252,19 @@ a:visited {
 .what-we-do ul > li {
   width: 370px;
   display: inline-block;
+  /* margin-right: 30px; */
+}
+
+.gallery li {
   margin-right: 30px;
 }
 
+.gallery li:last-child {
+  margin-right: 0px;
+}
+
 .gallery {
-  display: inline;
+  display: flex;
 }
 
 /* ----------------OUR-TEAM---------------- */
@@ -236,7 +275,7 @@ a:visited {
   background-color: var(--our-team-background-color);
 }
 
-.our-team > h2 {
+.our-team h2 {
   font-weight: bold;
   text-align: center;
   font-size: 36px;
@@ -245,13 +284,13 @@ a:visited {
   margin: 0 auto 50px auto;
 }
 
-.our-team > ul {
+.our-team ul {
   display: flex;
   justify-content: center;
   margin: 0;
 }
 
-.our-team > ul > li {
+.our-team ul > li {
   margin-right: 30px;
   height: 368px;
   width: 270px;
@@ -262,7 +301,11 @@ a:visited {
   border-radius: 0px 0px 4px 4px;
 }
 
-.our-team > ul > li > h3 {
+.our-team ul > li:last-child {
+  margin-right: 0;
+}
+
+.our-team ul > li > h3 {
   margin: 30px 0 10px 0;
   font-weight: 500;
   font-size: 16px;
@@ -284,7 +327,7 @@ a:visited {
 
 .footer {
   background-color: var(--banner-color);
-  padding: 60px 0 60px 215px;
+  padding: 60px 0;
 }
 
 .logo-footer {
@@ -330,9 +373,15 @@ a.address-line:visited {
 
 /* ----------------PORTFOLIO---------------- */
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filters {
   display: flex;
   justify-content: center;
+  padding-top: 94px;
 }
 
 .filters button {
@@ -359,30 +408,25 @@ a.address-line:visited {
 
 /* ----------------PORTFOLIO-IMG---------------- */
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-around;
-}
-
 .portfolio-img {
+  padding: 50px 0 94px 0;
   background-color: var(--main-title-color);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-  background: var(--main-title-color);
+}
+
+.portfolio-img > li:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.portfolio-img > li:nth-child(1n) {
+  margin-left: 0px;
 }
 
 .portfolio-img > li {
   border: 1px solid #eeeeee;
-  margin-right: 30px;
-  margin-bottom: 30px;
   width: 370px;
+  margin: 0 30px 15px 0;
 }
 
 .portfolio-img img {
@@ -391,7 +435,6 @@ header .container {
 }
 
 .portfolio-img h2 {
-  /* font-family: Roboto; */
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
