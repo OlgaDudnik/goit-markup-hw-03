@@ -159,7 +159,6 @@ ul {
   justify-content: center;
   align-items: center;
   width: 100%;
-  left: 0px;
   top: 80px;
   height: 600px;
   background-color: var(--banner-color);
@@ -192,7 +191,12 @@ ul {
 
 /* ----------------DESCRIPTION---------------- */
 
-.description-wrapper .container {
+/* .description-wrapper .container {
+  text-align: center;
+  padding-top: 94px;
+} */
+
+.description-wrapper {
   text-align: center;
   padding-top: 94px;
 }
@@ -213,12 +217,12 @@ ul {
 }
 
 .description h3 {
+  margin: 0 0 14px 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-bottom: 10px;
 }
 
 /* li .description-title:last-child {
@@ -232,6 +236,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   padding: 0;
+  margin: 0;
 }
 /* ----------------what-we-do---------------- */
 
@@ -247,6 +252,7 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+  margin-top: 0;
 }
 
 .what-we-do ul > li {
@@ -336,6 +342,7 @@ ul {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  margin-bottom: 20px;
 }
 
 .web-text-footer {
@@ -356,9 +363,14 @@ address a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-bottom: 9px;
 }
 
 a.address-line:visited {
+  color: var(--main-title-color);
+}
+
+a.address-mail:visited {
   color: var(--main-title-color);
 }
 
@@ -369,6 +381,10 @@ a.address-line:visited {
   letter-spacing: 0.03em;
 }
 
+.address-mail {
+  margin-bottom: 9px;
+}
+
 /* ----------------PORTFOLIO---------------- */
 
 header .container {
@@ -376,10 +392,14 @@ header .container {
   justify-content: space-between;
 }
 
+.filters-section {
+  padding-top: 94px;
+}
+
 .filters {
   display: flex;
   justify-content: center;
-  padding-top: 94px;
+  margin-bottom: 50px;
 }
 
 .filters button {
@@ -407,7 +427,6 @@ header .container {
 /* ----------------PORTFOLIO-IMG---------------- */
 
 .portfolio-img {
-  padding: 50px 0 94px 0;
   background-color: var(--main-title-color);
   display: flex;
   flex-wrap: wrap;
@@ -418,7 +437,7 @@ header .container {
 .portfolio-img > li {
   margin-left: var(--portfolio-item-gap);
   margin-top: var(--portfolio-item-gap);
-  border-bottom: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
   flex-basis: calc(100% / 3 - var(--portfolio-item-gap));
 }
 /* 
@@ -435,7 +454,6 @@ header .container {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding: 20px 24px 2px 24px;
   margin: 0;
 }
 
@@ -444,6 +462,9 @@ header .container {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  padding: 2px 24px 20px 24px;
   margin: 0;
+}
+
+.portfolio-img-text {
+  padding: 20px 24px;
 }
